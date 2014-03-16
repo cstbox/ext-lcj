@@ -1,0 +1,10 @@
+Package: cstbox-ext-lcj
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: cstbox-core, cstbox-serial-nmea
+Maintainer: Eric Pascual <eric.pascual@cstb.fr>
+Description: CSTBox LCJ NMEA products support
+    This package adds to an existing CSTBox framework the support for 
+    LCJ (http://www.lcjcapteurs.com/) NMEA products.

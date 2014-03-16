@@ -1,0 +1,91 @@
+{
+    "productname" : "LCJ.CV7V",
+    "__descr__" : {
+        "*" : "Ultrasonic wind sensor",
+        "fr" : "Anémomètre ultra-sonique"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "events_ttl"],
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            },
+            "min_speed" : {
+                "type" : "int",
+                "label" : {
+                    "fr" : "Vitesse minimale (m/s)",
+                    "*" : "Minimal wind speed (m/s)"
+                },
+                "defvalue" : 1
+            },
+            "values_ttl" : {
+                "type" : "int",
+                "label" : {
+                    "fr" : "Validité des valeurs (s)",
+                    "*" : "Values time to live (s)"
+                },
+                "defvalue" : 1
+            }
+        },
+        "outputs" : {
+            "__seq__" : ["wind_speed", "wind_dir", "wind_temp"],
+            "wind_speed" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" : {
+                    "fr" : "Vitesse du vent",
+                    "*" : "Wind speed"
+                },
+                "__vartype__" : "speed",
+                "__varunits__" : "m/s",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.5
+                }
+            },
+            "wind_dir" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Direction du vent",
+                    "*" : "Wind direction"
+                },
+                "__vartype__" : "angle",
+                "__varunits__" : "deg",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 5
+                }
+            },
+            "wind_temp" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Température",
+                    "*" : "Temperature"
+                },
+                "__vartype__" : "temperature",
+                "__varunits__" : "degC",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 2 
+                }
+            }
+        }
+    }
+}
