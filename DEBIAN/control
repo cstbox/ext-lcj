@@ -3,7 +3,7 @@ Version: 1.0
 Section: base
 Priority: optional
 Architecture: all
-Depends: cstbox-core, cstbox-serial-nmea
+Depends: cstbox-core, cstbox-ext-nmea-serial
 Maintainer: Eric Pascual <eric.pascual@cstb.fr>
 Description: CSTBox LCJ NMEA products support
     This package adds to an existing CSTBox framework the support for 
